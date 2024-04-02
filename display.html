@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploaded Image</title>
+</head>
+<body>
+    <h1>Uploaded Image</h1>
+    <div id="image-container"></div>
+    <script>
+        // Get the URL of the uploaded image from the PHP response
+        fetch('http://rpi1.local/upload.php', {
+            method: 'GET',
+        })
+        .then(response => response.text())
+        .then(imageUrl => {
+            // Create an image element and set its source to the uploaded image URL
+            var image = document.createElement('img');
+            image.src = imageUrl;
+            // Append the image to the image container div
+            document.getElementById('image-container').appendChild(image);
+        })
+        .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
