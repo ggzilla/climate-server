@@ -1,6 +1,6 @@
 <?php
 // Execute Python script
-$output = shell_exec('python3 /home/ben/plantcam/main.py 2>&1'); // Replace with the path to your Python script
+$output = shell_exec('python3 /home/ben/plantcam/main.py 2>&1');
 if ($output !== null) {
     echo $output;
 } else {
