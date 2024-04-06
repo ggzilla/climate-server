@@ -1,9 +1,11 @@
 /* Body Font */
 body {
+    background-color: #c4df9b;
     font-family: 'Poppins', sans-serif; /* Assign Poppins font to the body */
 }
 
 /* Headers */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Pacifico', cursive; /* Assign Pacifico font to headers */
+    color: #298d17
 }
