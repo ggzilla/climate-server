@@ -25,34 +25,35 @@
 </head>
 <body>
 	<div class="container">
-   		 <h1>Directory</h1>
-   		 <ul>
-        		<li><a href="gallery.php">Gallery</a></li>
-    		 </ul>
-	</div>
+   		<h1>Directory</h1>
+        <ul>
+        	<li><a href="gallery.php">Gallery</a></li>
+        </ul>
+        <h1>Add Photo to Gallery!</h1>
+            <button id="runScriptBtn">Take Photo</button>
+
+            <script>
+                document.getElementById('runScriptBtn').addEventListener('click', function() {
+                    this.disabled = true;
+                    var xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            if (xhr.status === 200) {
+                                console.log('Python script executed successfully');
+                                document.getElementById('successMessage').style.display = 'block';
+                            } else {
+                                console.error('Failed to execute Python script. Status code: ' + xhr.status);
+                            }
+                        }
+                    };
+                    xhr.open('GET', 'execute_script.php', true); // Change to your server-side script
+                    xhr.send();
+                });
+            </script>
+
+            <!-- Success Message -->
+            <div id="successMessage" style="display: none; color: green;">Python script executed succesfully!</div>
+
+            </div>
 </body>
 </html>
-    <h1>Add Photo to Gallery!</h1>
-    <button id="runScriptBtn">Take Photo</button>
-
-    <script>
-        document.getElementById('runScriptBtn').addEventListener('click', function() {
-            this.disabled = true;
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        console.log('Python script executed successfully');
-                        document.getElementById('successMessage').style.display = 'block';
-                    } else {
-                        console.error('Failed to execute Python script. Status code: ' + xhr.status);
-                    }
-                }
-            };
-            xhr.open('GET', 'execute_script.php', true); // Change to your server-side script
-            xhr.send();
-        });
-    </script>
-
-<!-- Success Message -->
-	<div id="successMessage" style="display: none; color: green;">Python script executed succesfully!</div>
