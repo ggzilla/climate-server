@@ -25,6 +25,8 @@
       });
     });
   </script>
-  <?php include 'layout.html'; ?>
+  <div class="container">
+    <?php include 'layout.html'; ?>
+  </div>
 </body>
 </html>
