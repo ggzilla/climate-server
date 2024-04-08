@@ -13,13 +13,12 @@
         $(document).ready(function() {
             $.get('http://rpi2.local:5000/sensor-data', function(data) {
             // Parse JSON response (commented out for static data)
-            // var sensorData = JSON.parse(data);
-
-            // Update HTML content with static data
+            var sensorData = JSON.parse(data);
+                // Update HTML content with sensor data
             $('#sensor-data').html(`
-                <p>Temperature: 22.5°C</p>
-                <p>Humidity: 55.2%</p>
-                <p>VPD: 1.2 kPa</p>
+                <p>Temperature: ${sensorData.temperature.toFixed(2)}°C</p>
+                <p>Humidity: ${sensorData.humidity.toFixed(2)}%</p>
+                <p>VPD: ${sensorData.vpd.toFixed(2)} kPa</p>
             `);
       });
     });
