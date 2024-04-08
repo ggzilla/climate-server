@@ -25,10 +25,7 @@
 </head>
 <body>
 	<div class="container">
-   		<h1>Directory</h1>
-        <ul>
-        	<li><a href="gallery.php">Gallery</a></li>
-        </ul>
+        <?php include 'layout.html'; ?>
         <h1>Add Photo to Gallery!</h1>
             <button id="runScriptBtn">Take Photo</button>
 
@@ -53,8 +50,6 @@
 
             <!-- Success Message -->
             <div id="successMessage" style="display: none; color: green;">Python script executed succesfully!</div>
-
-            </div>
-        <?php include 'layout.html'; ?>
+    </div>
 </body>
 </html>
