@@ -1,37 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uploaded Photos</title>
-    <style>
-        /* Default styles */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 10px;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Media queries for responsiveness */
-        @media screen and (max-width: 768px) {
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media screen and (max-width: 576px) {
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-
 
 </head>
 <body>
@@ -64,5 +37,6 @@
     }
     ?>
     </div>
+    <?php include 'layout.html'; ?>
 </body>
 </html>

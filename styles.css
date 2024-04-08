@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 
 /* Body Font */
@@ -12,3 +13,30 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Pacifico', cursive; /* Assign Pacifico font to headers */
     color: #298d17
 }
+
+/* Styles for the gallery container */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    margin: 0 auto;  /* Center the gallery horizontally */
+  }
+  
+  /* Styles for the images within the gallery */
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Media queries for responsive layout */
+  @media screen and (max-width: 768px) {
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+  }
