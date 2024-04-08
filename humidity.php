@@ -16,7 +16,7 @@
       $.get('http://rpi2.local:5000/sensor-data', function(data) {
         // Update HTML content with dynamic data
         $('#sensor-data').html(`
-          <p>Temperature: ${data.temperature}°C</p>
+          <p>Temperature: ${data.temperature}°F</p>
           <p>Humidity: ${data.humidity}%</p>
           <p>VPD: ${data.vpd} kPa</p>
         `);
