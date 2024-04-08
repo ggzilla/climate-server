@@ -55,5 +55,6 @@
             <div id="successMessage" style="display: none; color: green;">Python script executed succesfully!</div>
 
             </div>
+        <?php include 'layout.html'; ?>
 </body>
 </html>
