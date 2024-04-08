@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Sensor Data</title>
     <!-- Include jQuery library -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -10,16 +12,14 @@
 <body>
     <div id="sensor-data"></div>
     <script>
-        $(document).ready(function() {
-            $.get('http://rpi2.local:5000/sensor-data', function(data) {
-            // Parse JSON response (commented out for static data)
-            var sensorData = JSON.parse(data);
-                // Update HTML content with sensor data
-            $('#sensor-data').html(`
-                <p>Temperature: ${sensorData.temperature.toFixed(2)}°C</p>
-                <p>Humidity: ${sensorData.humidity.toFixed(2)}%</p>
-                <p>VPD: ${sensorData.vpd.toFixed(2)} kPa</p>
-            `);
+    $(document).ready(function() {
+      $.get('http://rpi2.local:5000/sensor-data', function(data) {
+        // Update HTML content with dynamic data
+        $('#sensor-data').html(`
+          <p>Temperature: ${data.temperature}°C</p>
+          <p>Humidity: ${data.humidity}%</p>
+          <p>VPD: ${data.vpd} kPa</p>
+        `);
       });
     });
   </script>
