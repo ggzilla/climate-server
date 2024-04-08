@@ -7,21 +7,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display Image</title>
-    <style>
-        /* Styles for the image */
-        img {
-            max-width: 100%; /* Ensure the image doesn't exceed its container's width */
-            height: auto; /* Maintain aspect ratio */
-            display: block; /* Remove any default spacing */
-            margin: 0 auto; /* Center the image horizontally */
-        }
-        /* Styles for the container */
-        .container {
-            max-width: 800px; /* Adjust max-width as needed */
-            margin: 0 auto; /* Center the container horizontally */
-            padding: 20px; /* Add some padding for better readability */
-        }
-    </style>
 </head>
 <body>
 	<div class="container">

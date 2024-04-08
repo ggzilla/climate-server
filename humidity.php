@@ -9,7 +9,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div id="sensor-data"></div>
+    <div class="container" id="sensor-data">
+        <h1>3x3 Tent Current Data:</h1>
+    </div>
     <script>
     $(document).ready(function() {
       $.get('http://rpi2.local:5000/sensor-data', function(data) {
