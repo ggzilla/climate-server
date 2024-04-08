@@ -13,7 +13,19 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Pacifico', cursive; /* Assign Pacifico font to headers */
     color: #298d17
 }
-
+/* Styles for the image */
+img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any default spacing */
+    margin: 0 auto; /* Center the image horizontally */
+}
+/* Styles for the container */
+.container {
+    max-width: 800px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add some padding for better readability */
+}
 /* Styles for the gallery container */
 .gallery {
     display: grid;
